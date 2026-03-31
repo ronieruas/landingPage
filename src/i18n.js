@@ -1,6 +1,31 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
+function normalizeLang(input) {
+  const s = String(input || '').toLowerCase();
+  if (s.startsWith('pt')) return 'pt';
+  if (s.startsWith('es')) return 'es';
+  return 'en';
+}
+
+function getInitialLang() {
+  try {
+    if (typeof window !== 'undefined') {
+      const saved = window.localStorage?.getItem('landingLang') || window.localStorage?.getItem('i18nextLng');
+      if (saved) return normalizeLang(saved);
+    }
+  } catch (e) {}
+
+  try {
+    if (typeof navigator !== 'undefined') {
+      const nav = (navigator.languages && navigator.languages[0]) || navigator.language;
+      if (nav) return normalizeLang(nav);
+    }
+  } catch (e) {}
+
+  return 'en';
+}
+
 const resources = {
   en: {
     translation: {
@@ -431,7 +456,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // default language
+    lng: getInitialLang(),
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false

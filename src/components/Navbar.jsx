@@ -7,6 +7,9 @@ export default function Navbar() {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    try {
+      window.localStorage.setItem('landingLang', lng);
+    } catch (e) {}
   };
   return (
     <motion.nav 
