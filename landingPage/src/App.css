@@ -1,0 +1,5 @@
+/* General App styles can go here if needed, but most are in index.css */
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
