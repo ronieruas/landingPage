@@ -8,6 +8,7 @@ export default function Hero() {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
   const words = [t('hero.words.rehearsals'), t('hero.words.performances'), t('hero.words.church_services'), t('hero.words.tours')];
+  const badge = String(t('hero.badge') || '').trim();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,27 +45,29 @@ export default function Hero() {
         <Music size={160} />
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        style={{ 
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '0.5rem',
-          padding: '0.5rem 1rem',
-          background: 'rgba(74, 222, 128, 0.1)',
-          border: '1px solid rgba(74, 222, 128, 0.2)',
-          borderRadius: '50px',
-          color: 'var(--neon-green)',
-          fontSize: '0.85rem',
-          fontWeight: '600',
-          marginBottom: '2rem'
-        }}
-      >
-        <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--neon-green)', boxShadow: '0 0 10px var(--neon-green)' }}></span>
-        {t('hero.badge')}
-      </motion.div>
+      {badge ? (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ 
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            padding: '0.5rem 1rem',
+            background: 'rgba(74, 222, 128, 0.1)',
+            border: '1px solid rgba(74, 222, 128, 0.2)',
+            borderRadius: '50px',
+            color: 'var(--neon-green)',
+            fontSize: '0.85rem',
+            fontWeight: '600',
+            marginBottom: '2rem'
+          }}
+        >
+          <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--neon-green)', boxShadow: '0 0 10px var(--neon-green)' }}></span>
+          {badge}
+        </motion.div>
+      ) : null}
 
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 40 }}

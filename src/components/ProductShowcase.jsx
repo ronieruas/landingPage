@@ -68,6 +68,28 @@ export default function ProductShowcase() {
         >
           {t('showcase.title')}<span className="text-gradient">{t('showcase.titleHighlight')}</span>
         </motion.h2>
+        <p className="showcase-lead">
+          {t('showcase.lead')}
+        </p>
+        <div className="showcase-video">
+          <div className="showcase-video-device">
+            <div className="showcase-video-screen">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/tablet-mockup.png"
+                aria-label={t('showcase.videoAlt')}
+                title={t('showcase.videoAlt')}
+              >
+                <source src="/copy_n_paste.mp4" type="video/mp4" />
+                <p>{t('showcase.videoFallback')}</p>
+              </video>
+            </div>
+          </div>
+        </div>
         <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
           {t('showcase.subtitle')} 
           <br/><span style={{ fontSize: '0.9rem', color: 'var(--neon-green)', marginTop: '0.5rem', display: 'inline-block' }}>{t('showcase.hint')}</span>

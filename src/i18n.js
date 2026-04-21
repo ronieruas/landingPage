@@ -14,14 +14,18 @@ function getInitialLang() {
       const saved = window.localStorage?.getItem('landingLang') || window.localStorage?.getItem('i18nextLng');
       if (saved) return normalizeLang(saved);
     }
-  } catch (e) {}
+  } catch (_e) {
+    void _e;
+  }
 
   try {
     if (typeof navigator !== 'undefined') {
       const nav = (navigator.languages && navigator.languages[0]) || navigator.language;
       if (nav) return normalizeLang(nav);
     }
-  } catch (e) {}
+  } catch (_e) {
+    void _e;
+  }
 
   return 'en';
 }
@@ -35,7 +39,7 @@ const resources = {
         getStarted: 'Login'
       },
       hero: {
-        badge: 'ChordChart Pro 1.0 is Live',
+        badge: '',
         title: "Your Band's Setlist in the palm of your ",
         titleHighlight: 'hand',
         desc: 'Organize chord charts, create collaborative setlists, and synchronize the entire team in real time during ',
@@ -82,8 +86,11 @@ const resources = {
       showcase: {
         title: 'See it in ',
         titleHighlight: 'Action',
+        lead: 'The chord chart, your way. Copy from any site, customize every chord, and organize your setlist in seconds.',
         subtitle: 'Beautifully synchronized interfaces across web and mobile.',
-        hint: 'Click the screens to swap and see more app features.'
+        hint: 'Click the screens to swap and see more app features.',
+        videoAlt: 'Demo video showing copying and pasting a chord chart, then editing and organizing it.',
+        videoFallback: 'Your browser does not support embedded videos.'
       },
       pricing: {
         title: 'Simple, transparent ',
@@ -97,9 +104,8 @@ const resources = {
             desc: 'For musicians starting to organize their repertoire.',
             features: [
               'Website access',
-              'Up to 50 songs',
-              'Basic Setlist creation',
-              'Standard support'
+              'Up to 15 songs',
+              'Basic Setlist creation'
             ],
             cta: 'Start Free'
           },
@@ -107,14 +113,13 @@ const resources = {
             name: 'Annual',
             price: 'U$ 9.99',
             period: '/ year',
-            desc: 'Best value for bands and worship teams.',
+            desc: 'Discounted subscription',
             features: [
               'Website and App access',
               'Unlimited songs & setlists',
               'Live Jam Sync',
               'Smart Transpose & Capo',
-              'Team collaboration',
-              'Priority support'
+              'Team collaboration'
             ],
             tagline: 'MOST POPULAR',
             cta: 'Get Annual Plan'
@@ -128,7 +133,8 @@ const resources = {
               'Website and App access',
               'Unlimited songs & setlists',
               'Live Jam Sync',
-              'Smart Transpose & Capo'
+              'Smart Transpose & Capo',
+              'Team collaboration'
             ],
             cta: 'Go Pro Monthly'
           }
@@ -176,7 +182,7 @@ const resources = {
         getStarted: 'Login'
       },
       hero: {
-        badge: 'ChordChart Pro 1.0 já está no ar',
+        badge: '',
         title: 'O Repertório da sua Banda na palma da sua ',
         titleHighlight: 'mão',
         desc: 'Organize cifras, crie repertórios colaborativos e sincronize toda a equipe em tempo real durante ',
@@ -223,8 +229,11 @@ const resources = {
       showcase: {
         title: 'Veja em ',
         titleHighlight: 'Ação',
+        lead: 'A cifra, do seu jeito. Copie de qualquer site, personalize cada acorde e organize seu setlist em segundos.',
         subtitle: 'Interfaces lindamente sincronizadas na web e no celular.',
-        hint: 'Clique nas telas para trocar e ver mais recursos do aplicativo.'
+        hint: 'Clique nas telas para trocar e ver mais recursos do aplicativo.',
+        videoAlt: 'Vídeo de demonstração mostrando copiar e colar uma cifra, depois editar e organizar.',
+        videoFallback: 'Seu navegador não suporta vídeo incorporado.'
       },
       pricing: {
         title: 'Preços simples e ',
@@ -238,9 +247,8 @@ const resources = {
             desc: 'Para músicos que estão começando a organizar seu repertório.',
             features: [
               'Acesso pelo site',
-              'Até 50 músicas',
-              'Criação básica de repertório',
-              'Suporte padrão'
+              'Até 15 músicas',
+              'Criação básica de repertório'
             ],
             cta: 'Começar Grátis'
           },
@@ -248,14 +256,13 @@ const resources = {
             name: 'Anual',
             price: 'R$ 29,90',
             period: '/ ano',
-            desc: 'Melhor valor para bandas e equipes de louvor.',
+            desc: 'Assinatura com desconto',
             features: [
               'Acesso pelo site e app',
               'Músicas e repertórios ilimitados',
               'Jam Sync ao vivo',
               'Transposição inteligente e Capo',
-              'Colaboração em equipe',
-              'Suporte prioritário'
+              'Colaboração em equipe'
             ],
             tagline: 'MAIS POPULAR',
             cta: 'Assinar Plano Anual'
@@ -269,7 +276,8 @@ const resources = {
               'Acesso pelo site e app',
               'Músicas e repertórios ilimitados',
               'Jam Sync ao vivo',
-              'Transposição inteligente e Capo'
+              'Transposição inteligente e Capo',
+              'Colaboração em equipe'
             ],
             cta: 'Assinar Plano Mensal'
           }
@@ -317,7 +325,7 @@ const resources = {
         getStarted: 'Iniciar sesión'
       },
       hero: {
-        badge: 'ChordChart Pro 1.0 ya está disponible',
+        badge: '',
         title: 'El Repertorio de tu Banda en la palma de tu ',
         titleHighlight: 'mano',
         desc: 'Organiza acordes, crea repertorios colaborativos y sincroniza a todo el equipo en tiempo real durante ',
@@ -364,8 +372,11 @@ const resources = {
       showcase: {
         title: 'Míralo en ',
         titleHighlight: 'Acción',
+        lead: 'El cifrado, a tu manera. Copia de cualquier sitio, personaliza cada acorde y organiza tu setlist en segundos.',
         subtitle: 'Interfaces hermosamente sincronizadas en web y móvil.',
-        hint: 'Haz clic en las pantallas para intercambiar y ver más características de la aplicación.'
+        hint: 'Haz clic en las pantallas para intercambiar y ver más características de la aplicación.',
+        videoAlt: 'Video de demostración que muestra copiar y pegar un cifrado, luego editar y organizar.',
+        videoFallback: 'Tu navegador no admite videos incrustados.'
       },
       pricing: {
         title: 'Precios simples y ',
@@ -379,9 +390,8 @@ const resources = {
             desc: 'Para músicos que recién comienzan a organizar su repertorio.',
             features: [
               'Acceso web',
-              'Hasta 50 canciones',
-              'Creación básica de repertorios',
-              'Soporte estándar'
+              'Hasta 15 canciones',
+              'Creación básica de repertorios'
             ],
             cta: 'Empezar Gratis'
           },
@@ -389,14 +399,13 @@ const resources = {
             name: 'Anual',
             price: 'U$ 9.99',
             period: '/ año',
-            desc: 'Mejor valor para bandas y equipos de alabanza.',
+            desc: 'Suscripción con descuento',
             features: [
               'Acceso web y móvil',
               'Canciones y repertorios ilimitados',
               'Jam Sync en vivo',
               'Transposición Inteligente y Capo',
-              'Colaboración en equipo',
-              'Soporte prioritario'
+              'Colaboración en equipo'
             ],
             tagline: 'MÁS POPULAR',
             cta: 'Obtener Plan Anual'
@@ -410,7 +419,8 @@ const resources = {
               'Acceso web y móvil',
               'Canciones y repertorios ilimitados',
               'Jam Sync en vivo',
-              'Transposición Inteligente y Capo'
+              'Transposición Inteligente y Capo',
+              'Colaboración en equipo'
             ],
             cta: 'Obtener Plan Mensual'
           }

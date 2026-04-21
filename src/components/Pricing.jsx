@@ -69,7 +69,7 @@ export default function Pricing() {
           alignItems: 'center'
         }}
       >
-        {plans.map((plan, i) => (
+        {plans.map((plan) => (
           <motion.div
             key={plan.name}
             variants={cardVariants}

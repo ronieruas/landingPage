@@ -42,6 +42,51 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@media (max-width: 768px) {
+  .landing-nav {
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    padding: 0.9rem 0.9rem !important;
+  }
+
+  .landing-nav-right {
+    width: auto;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+
+  .landing-brand-text {
+    display: none;
+  }
+
+  .landing-logo {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .landing-nav-right .glow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0.55rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 0.3rem 0.5rem !important;
+  }
+
+  .lang-button {
+    padding: 0.2rem 0.55rem !important;
+    font-size: 0.85rem !important;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
@@ -117,6 +162,45 @@ a {
   max-width: 1280px;
   margin: 0 auto;
   padding: var(--section-padding);
+}
+
+.showcase-lead {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 760px;
+  margin: 0 auto 1.25rem;
+  line-height: 1.6;
+}
+
+.showcase-video {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+
+.showcase-video-device {
+  width: min(375px, 100%);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  border-radius: 44px;
+  padding: 12px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.10), rgba(0, 0, 0, 0.65));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 168, 168, 0.18);
+}
+
+.showcase-video-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 34px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.showcase-video-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Background Effects */

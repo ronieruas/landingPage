@@ -9,10 +9,13 @@ export default function Navbar() {
     i18n.changeLanguage(lng);
     try {
       window.localStorage.setItem('landingLang', lng);
-    } catch (e) {}
+    } catch (_e) {
+      void _e;
+    }
   };
   return (
     <motion.nav 
+      className="landing-nav"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -39,6 +42,7 @@ export default function Navbar() {
         <img 
           src="/logo.png" 
           alt="ChordChart Pro Logo" 
+          className="landing-logo"
           style={{ width: '42px', height: '42px', objectFit: 'contain' }} 
         />
         <span style={{ 
@@ -46,7 +50,7 @@ export default function Navbar() {
           fontWeight: '700', 
           fontSize: '1.25rem',
           letterSpacing: '-0.5px'
-        }}>
+        }} className="landing-brand-text">
           ChordChart <span className="text-gradient">Pro</span>
         </span>
       </button>
@@ -56,12 +60,12 @@ export default function Navbar() {
         <a href="#plans">{t('nav.pricing')}</a>
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+      <div className="landing-nav-right" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
         {/* Language Switcher */}
-        <div style={{ display: 'flex', gap: '0.4rem', background: 'rgba(255,255,255,0.05)', padding: '0.4rem 0.6rem', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)' }}>
-          <button onClick={() => changeLanguage('en')} style={{ background: i18n.language === 'en' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'en' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>EN</button>
-          <button onClick={() => changeLanguage('pt')} style={{ background: i18n.language === 'pt' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'pt' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>PT</button>
-          <button onClick={() => changeLanguage('es')} style={{ background: i18n.language === 'es' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'es' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>ES</button>
+        <div className="lang-switcher" style={{ display: 'flex', gap: '0.4rem', background: 'rgba(255,255,255,0.05)', padding: '0.4rem 0.6rem', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)' }}>
+          <button className="lang-button" onClick={() => changeLanguage('en')} style={{ background: i18n.language === 'en' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'en' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>EN</button>
+          <button className="lang-button" onClick={() => changeLanguage('pt')} style={{ background: i18n.language === 'pt' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'pt' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>PT</button>
+          <button className="lang-button" onClick={() => changeLanguage('es')} style={{ background: i18n.language === 'es' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'es' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>ES</button>
         </div>
         <button
           className="glow-btn"
