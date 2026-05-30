@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { getAppUrl, getLegalUrl, goToLogin } from '../appLinks';
+import { getAppUrl, getLegalUrl, getPlayStoreUrl, goToLogin } from '../appLinks';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -33,6 +33,14 @@ export default function Footer() {
             ChordChart <span className="text-gradient">Pro</span>
           </span>
         </button>
+
+        <a href={getPlayStoreUrl()} style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <img
+            src="/GetItOnGooglePlay_Badge_Web_color_English.png"
+            alt="Get it on Google Play"
+            style={{ height: '40px', width: 'auto' }}
+          />
+        </a>
         
         <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
           <a href={legalUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.privacy')}</a>

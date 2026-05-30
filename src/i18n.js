@@ -75,7 +75,7 @@ const resources = {
           },
           {
             title: 'Web + Mobile Sync',
-            desc: 'Compose on your computer, play on your phone. Always synchronized in the cloud.'
+            desc: 'Compose on your computer, play on your phone. Always synchronized in the cloud. Offline access for favorite songs and setlists.'
           },
           {
             title: 'Full Customization',
@@ -103,8 +103,8 @@ const resources = {
             period: '',
             desc: 'For musicians starting to organize their repertoire.',
             features: [
-              'Website access',
-              'Up to 15 songs',
+              'Website and App access',
+              'Up to 5 songs',
               'Basic Setlist creation'
             ],
             cta: 'Start Free'
@@ -218,7 +218,7 @@ const resources = {
           },
           {
             title: 'Sincronização Web + Mobile',
-            desc: 'Componha no computador, toque no celular. Sempre sincronizado na nuvem.'
+            desc: 'Componha no computador, toque no celular. Sempre sincronizado na nuvem. Acesso às músicas favoritas e setlist no modo offline.'
           },
           {
             title: 'Personalização Completa',
@@ -246,8 +246,8 @@ const resources = {
             period: '',
             desc: 'Para músicos que estão começando a organizar seu repertório.',
             features: [
-              'Acesso pelo site',
-              'Até 15 músicas',
+              'Acesso pelo site e app',
+              'Até 5 músicas',
               'Criação básica de repertório'
             ],
             cta: 'Começar Grátis'
@@ -361,7 +361,7 @@ const resources = {
           },
           {
             title: 'Sincronización Web + Móvil',
-            desc: 'Anota en tu computadora, toca en tu celular. Siempre sincronizado en la nube.'
+            desc: 'Anota en tu computadora, toca en tu celular. Siempre sincronizado en la nube. Acceso sin conexión a canciones favoritas y setlists.'
           },
           {
             title: 'Personalización Completa',
@@ -389,8 +389,8 @@ const resources = {
             period: '',
             desc: 'Para músicos que recién comienzan a organizar su repertorio.',
             features: [
-              'Acceso web',
-              'Hasta 15 canciones',
+              'Acceso web y móvil',
+              'Hasta 5 canciones',
               'Creación básica de repertorios'
             ],
             cta: 'Empezar Gratis'

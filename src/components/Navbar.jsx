@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { goToLogin } from '../appLinks';
+import { getPlayStoreUrl, goToLogin } from '../appLinks';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -61,7 +61,13 @@ export default function Navbar() {
       </div>
 
       <div className="landing-nav-right" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-        {/* Language Switcher */}
+        <a href={getPlayStoreUrl()} style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <img
+            src="/GetItOnGooglePlay_Badge_Web_color_English.png"
+            alt="Get it on Google Play"
+            style={{ height: '34px', width: 'auto' }}
+          />
+        </a>
         <div className="lang-switcher" style={{ display: 'flex', gap: '0.4rem', background: 'rgba(255,255,255,0.05)', padding: '0.4rem 0.6rem', borderRadius: '50px', border: '1px solid rgba(255,255,255,0.1)' }}>
           <button className="lang-button" onClick={() => changeLanguage('en')} style={{ background: i18n.language === 'en' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'en' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>EN</button>
           <button className="lang-button" onClick={() => changeLanguage('pt')} style={{ background: i18n.language === 'pt' ? 'rgba(74, 222, 128, 0.2)' : 'transparent', color: i18n.language === 'pt' ? 'var(--neon-green)' : 'var(--text-secondary)', border: 'none', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', padding: '0.2rem 0.6rem', borderRadius: '30px', transition: 'all 0.2s' }}>PT</button>
