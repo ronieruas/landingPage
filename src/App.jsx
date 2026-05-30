@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import DownloadApp from './components/DownloadApp';
 import Benefits from './components/Benefits';
 import ProductShowcase from './components/ProductShowcase';
 import Pricing from './components/Pricing';
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <DownloadApp />
         <Benefits />
         <ProductShowcase />
         <Pricing />

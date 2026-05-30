@@ -87,6 +87,124 @@ body {
   }
 }
 
+.download-app-section {
+  width: 100%;
+  background: #4C6B6E;
+  overflow: hidden;
+}
+
+.download-app-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 70px 8vw;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.download-app-left {
+  flex: 0 1 45%;
+}
+
+.download-app-title {
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4.5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  margin-bottom: 44px;
+}
+
+.download-app-badges {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.download-app-badge-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.download-app-badge {
+  height: 54px;
+  width: auto;
+  display: block;
+}
+
+.download-app-right {
+  flex: 0 1 55%;
+  position: relative;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.download-app-phone {
+  height: 520px;
+  width: auto;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -90px;
+}
+
+@media (max-width: 960px) {
+  .download-app-inner {
+    padding: 64px 6vw;
+    gap: 32px;
+  }
+  .download-app-right {
+    height: 470px;
+  }
+  .download-app-phone {
+    height: 470px;
+    bottom: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-app-inner {
+    padding: 60px 8vw;
+    min-height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .download-app-left {
+    flex-basis: auto;
+  }
+
+  .download-app-title {
+    margin-bottom: 22px;
+  }
+
+  .download-app-badges {
+    justify-content: center;
+  }
+
+  .download-app-right {
+    width: 100%;
+    flex-basis: auto;
+    height: 420px;
+    justify-content: center;
+  }
+
+  .download-app-phone {
+    position: relative;
+    right: auto;
+    bottom: -40px;
+    height: 420px;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
 }
