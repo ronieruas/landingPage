@@ -135,21 +135,17 @@ body {
 
 .store-badge {
   display: block;
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: contain;
-  object-position: center;
   vertical-align: middle;
 }
 
 .store-badge--hero {
-  width: 180px;
-  height: 60px;
+  height: 52px;
 }
 
 .store-badge--footer {
-  width: 150px;
-  height: 50px;
+  height: 40px;
 }
 
 .download-app-right {
@@ -207,13 +203,11 @@ body {
   }
 
   .store-badge--hero {
-    width: 168px;
-    height: 56px;
+    height: 48px;
   }
 
   .store-badge--footer {
-    width: 138px;
-    height: 46px;
+    height: 36px;
   }
 
   .download-app-right {
