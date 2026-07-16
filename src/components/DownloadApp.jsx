@@ -9,16 +9,16 @@ export default function DownloadApp() {
           <div className="store-badges">
             <a href={getAppStoreUrl()} className="store-badge-link" aria-label="Download on the App Store">
               <img
-                src="/App_Store_Badge_US-UK_RGB.svg"
+                src="/apple_badge.svg"
                 alt="Download on the App Store"
-                className="store-badge store-badge--apple store-badge--hero"
+                className="store-badge store-badge--hero"
               />
             </a>
             <a href={getPlayStoreUrl()} className="store-badge-link" aria-label="Get it on Google Play">
               <img
-                src="/GetItOnGooglePlay_Badge_Web_color_English.svg"
+                src="/google_badge.svg"
                 alt="Get it on Google Play"
-                className="store-badge store-badge--google store-badge--hero"
+                className="store-badge store-badge--hero"
               />
             </a>
           </div>
