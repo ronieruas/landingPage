@@ -6,19 +6,19 @@ export default function DownloadApp() {
       <div className="download-app-inner">
         <div className="download-app-left">
           <h2 className="download-app-title">Download the app</h2>
-          <div className="download-app-badges">
-            <a href={getAppStoreUrl()} className="download-app-badge-link" aria-label="Download on the App Store">
+          <div className="store-badges">
+            <a href={getAppStoreUrl()} className="store-badge-link" aria-label="Download on the App Store">
               <img
                 src="/App_Store_Badge_US-UK_RGB.svg"
                 alt="Download on the App Store"
-                className="download-app-badge"
+                className="store-badge store-badge--hero"
               />
             </a>
-            <a href={getPlayStoreUrl()} className="download-app-badge-link" aria-label="Get it on Google Play">
+            <a href={getPlayStoreUrl()} className="store-badge-link" aria-label="Get it on Google Play">
               <img
                 src="/GetItOnGooglePlay_Badge_Web_color_English.png"
                 alt="Get it on Google Play"
-                className="download-app-badge"
+                className="store-badge store-badge--hero"
               />
             </a>
           </div>

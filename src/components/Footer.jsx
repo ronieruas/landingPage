@@ -34,19 +34,19 @@ export default function Footer() {
           </span>
         </button>
 
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <a href={getAppStoreUrl()} style={{ display: 'inline-flex', alignItems: 'center' }}>
+        <div className="store-badges">
+          <a href={getAppStoreUrl()} className="store-badge-link" aria-label="Download on the App Store">
             <img
               src="/App_Store_Badge_US-UK_RGB.svg"
               alt="Download on the App Store"
-              style={{ height: '40px', width: 'auto' }}
+              className="store-badge store-badge--footer"
             />
           </a>
-          <a href={getPlayStoreUrl()} style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <a href={getPlayStoreUrl()} className="store-badge-link" aria-label="Get it on Google Play">
             <img
               src="/GetItOnGooglePlay_Badge_Web_color_English.png"
               alt="Get it on Google Play"
-              style={{ height: '40px', width: 'auto' }}
+              className="store-badge store-badge--footer"
             />
           </a>
         </div>

@@ -119,21 +119,31 @@ body {
   margin-bottom: 44px;
 }
 
-.download-app-badges {
+.store-badges {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-wrap: wrap;
 }
 
-.download-app-badge-link {
+.store-badge-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
-.download-app-badge {
-  height: 54px;
+.store-badge {
   width: auto;
   display: block;
+  vertical-align: middle;
+}
+
+.store-badge--hero {
+  height: 52px;
+}
+
+.store-badge--footer {
+  height: 40px;
 }
 
 .download-app-right {
@@ -186,7 +196,7 @@ body {
     margin-bottom: 22px;
   }
 
-  .download-app-badges {
+  .store-badges {
     justify-content: center;
   }
 
