@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { goToPlayStore, goToRegister } from '../appLinks';
+import { goToRegister, goToSubscriptionStore } from '../appLinks';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -142,7 +142,7 @@ export default function Pricing() {
               onMouseOut={(e) => {
                  if(!plan.highlight) e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
               }}
-              onClick={() => (plan._index === 0 ? goToRegister() : goToPlayStore())}
+              onClick={() => (plan._index === 0 ? goToRegister() : goToSubscriptionStore())}
             >
               {plan.cta}
             </button>

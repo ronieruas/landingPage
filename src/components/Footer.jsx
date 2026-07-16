@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { getAppUrl, getLegalUrl, getPlayStoreUrl, goToLogin } from '../appLinks';
+import { getAppStoreUrl, getAppUrl, getLegalUrl, getPlayStoreUrl, goToLogin } from '../appLinks';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -34,13 +34,22 @@ export default function Footer() {
           </span>
         </button>
 
-        <a href={getPlayStoreUrl()} style={{ display: 'inline-flex', alignItems: 'center' }}>
-          <img
-            src="/GetItOnGooglePlay_Badge_Web_color_English.png"
-            alt="Get it on Google Play"
-            style={{ height: '40px', width: 'auto' }}
-          />
-        </a>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <a href={getAppStoreUrl()} style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <img
+              src="/App_Store_Badge_US-UK_RGB.svg"
+              alt="Download on the App Store"
+              style={{ height: '40px', width: 'auto' }}
+            />
+          </a>
+          <a href={getPlayStoreUrl()} style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <img
+              src="/GetItOnGooglePlay_Badge_Web_color_English.png"
+              alt="Get it on Google Play"
+              style={{ height: '40px', width: 'auto' }}
+            />
+          </a>
+        </div>
         
         <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
           <a href={legalUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.privacy')}</a>

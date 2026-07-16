@@ -95,7 +95,7 @@ const resources = {
       pricing: {
         title: 'Simple, transparent ',
         titleHighlight: 'pricing',
-        subtitle: 'Choose the plan that best fits your band. Subscription available via Google Play Billing.',
+        subtitle: 'Choose the plan that best fits your band. Available on the App Store and Google Play.',
         plans: [
           {
             name: 'Free',
@@ -238,7 +238,7 @@ const resources = {
       pricing: {
         title: 'Preços simples e ',
         titleHighlight: 'transparentes',
-        subtitle: 'Escolha o plano que melhor se adapta à sua banda. Assinatura disponível pelo Google Play Billing.',
+        subtitle: 'Escolha o plano que melhor se adapta à sua banda. Disponível na App Store e Google Play.',
         plans: [
           {
             name: 'Grátis',
@@ -381,7 +381,7 @@ const resources = {
       pricing: {
         title: 'Precios simples y ',
         titleHighlight: 'transparentes',
-        subtitle: 'Elige el plan que mejor se adapte a tu banda. Suscripción disponible mediante Google Play Billing.',
+        subtitle: 'Elige el plan que mejor se adapte a tu banda. Disponible en App Store y Google Play.',
         plans: [
           {
             name: 'Gratis',

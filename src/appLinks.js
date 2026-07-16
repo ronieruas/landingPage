@@ -7,6 +7,10 @@ export function getPlayStoreUrl() {
   return 'https://play.google.com/store/apps/details?id=com.chordchart.mobile';
 }
 
+export function getAppStoreUrl() {
+  return 'https://apps.apple.com/br/app/chordchart-pro/id6777218870';
+}
+
 function getLandingLang() {
   try {
     const raw =
@@ -51,6 +55,34 @@ export function goToRegister() {
 
 export function goToPlayStore() {
   window.location.href = getPlayStoreUrl();
+}
+
+export function goToAppStore() {
+  window.location.href = getAppStoreUrl();
+}
+
+function getPlatform() {
+  try {
+    const ua = navigator.userAgent || navigator.vendor || '';
+    if (/android/i.test(ua)) return 'android';
+    if (/iPad|iPhone|iPod/i.test(ua)) return 'ios';
+  } catch (_e) {
+    void _e;
+  }
+  return 'web';
+}
+
+export function goToSubscriptionStore() {
+  const platform = getPlatform();
+  if (platform === 'ios') {
+    goToAppStore();
+    return;
+  }
+  if (platform === 'android') {
+    goToPlayStore();
+    return;
+  }
+  scrollToId('download-app');
 }
 
 export function scrollToId(id) {
