@@ -16,7 +16,7 @@ export default function DownloadApp() {
             </a>
             <a href={getPlayStoreUrl()} className="store-badge-link" aria-label="Get it on Google Play">
               <img
-                src="/GetItOnGooglePlay_Badge_Web_color_English.png"
+                src="/GetItOnGooglePlay_Badge_Web_color_English.svg"
                 alt="Get it on Google Play"
                 className="store-badge store-badge--hero"
               />
