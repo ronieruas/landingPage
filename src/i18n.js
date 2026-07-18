@@ -95,7 +95,7 @@ const resources = {
       pricing: {
         title: 'Simple, transparent ',
         titleHighlight: 'pricing',
-        subtitle: 'Choose the plan that best fits your band. Available on the App Store and Google Play.',
+        subtitle: 'Choose the plan that best fits your band. Available on the App Store and Google Play. Prices may vary by region.',
         plans: [
           {
             name: 'Free',
@@ -111,7 +111,7 @@ const resources = {
           },
           {
             name: 'Annual',
-            price: 'U$ 9.99',
+            price: 'USD $ 9.90',
             period: '/ year',
             desc: 'Discounted subscription',
             features: [
@@ -126,7 +126,7 @@ const resources = {
           },
           {
             name: 'Monthly',
-            price: 'U$ 0.99',
+            price: 'USD $ 0.90',
             period: '/ month',
             desc: 'Flexibility for individual musicians and pros.',
             features: [
@@ -238,7 +238,7 @@ const resources = {
       pricing: {
         title: 'Preços simples e ',
         titleHighlight: 'transparentes',
-        subtitle: 'Escolha o plano que melhor se adapta à sua banda. Disponível na App Store e Google Play.',
+        subtitle: 'Escolha o plano que melhor se adapta à sua banda. Disponível na App Store e Google Play. Os valores podem variar conforme a região.',
         plans: [
           {
             name: 'Grátis',
@@ -269,7 +269,7 @@ const resources = {
           },
           {
             name: 'Mensal',
-            price: 'R$ 2,99',
+            price: 'R$ 2,90',
             period: '/ mês',
             desc: 'Flexibilidade para músicos individuais e profissionais.',
             features: [
@@ -381,7 +381,7 @@ const resources = {
       pricing: {
         title: 'Precios simples y ',
         titleHighlight: 'transparentes',
-        subtitle: 'Elige el plan que mejor se adapte a tu banda. Disponible en App Store y Google Play.',
+        subtitle: 'Elige el plan que mejor se adapte a tu banda. Disponible en App Store y Google Play. Los precios pueden variar según la región.',
         plans: [
           {
             name: 'Gratis',
@@ -397,7 +397,7 @@ const resources = {
           },
           {
             name: 'Anual',
-            price: 'U$ 9.99',
+            price: 'USD $ 9.90',
             period: '/ año',
             desc: 'Suscripción con descuento',
             features: [
@@ -412,7 +412,7 @@ const resources = {
           },
           {
             name: 'Mensual',
-            price: 'U$ 0.99',
+            price: 'USD $ 0.90',
             period: '/ mes',
             desc: 'Flexibilidad para músicos individuales y profesionales.',
             features: [
