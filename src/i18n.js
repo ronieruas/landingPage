@@ -111,7 +111,7 @@ const resources = {
           },
           {
             name: 'Annual',
-            price: 'USD $ 9.90',
+            price: 'U$ 9.90',
             period: '/ year',
             desc: 'Discounted subscription',
             features: [
@@ -126,7 +126,7 @@ const resources = {
           },
           {
             name: 'Monthly',
-            price: 'USD $ 0.90',
+            price: 'U$ 0.90',
             period: '/ month',
             desc: 'Flexibility for individual musicians and pros.',
             features: [
@@ -397,7 +397,7 @@ const resources = {
           },
           {
             name: 'Anual',
-            price: 'USD $ 9.90',
+            price: 'U$ 9.90',
             period: '/ año',
             desc: 'Suscripción con descuento',
             features: [
@@ -412,7 +412,7 @@ const resources = {
           },
           {
             name: 'Mensual',
-            price: 'USD $ 0.90',
+            price: 'U$ 0.90',
             period: '/ mes',
             desc: 'Flexibilidad para músicos individuales y profesionales.',
             features: [
