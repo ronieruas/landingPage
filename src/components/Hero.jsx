@@ -87,8 +87,8 @@ export default function Hero() {
           zIndex: 0
         }}></div>
         <img 
-          src="/tablet-mockup.png" 
-          alt="ChordChart Pro Tablet Interface" 
+          src="/celular_laptop.png" 
+          alt="ChordChart Pro Mobile and Desktop Interface" 
           style={{ 
             width: '100%', 
             height: 'auto', 
