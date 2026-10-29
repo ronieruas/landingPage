@@ -1,9 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { getAppStoreUrl, getAppUrl, getLegalUrl, getPlayStoreUrl, goToLogin } from '../appLinks';
+import { getAppStoreUrl, getAppUrl, getContactUrl, getLegalUrl, getPlayStoreUrl, goToLogin } from '../appLinks';
 
 export default function Footer() {
   const { t } = useTranslation();
   const appUrl = getAppUrl();
+  const contactUrl = getContactUrl();
   const legalUrl = getLegalUrl();
   return (
     <footer style={{ 
@@ -54,7 +55,7 @@ export default function Footer() {
         <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
           <a href={legalUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.privacy')}</a>
           <a href={legalUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.terms')}</a>
-          <a href="mailto:support@chordchartpro.com" style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.contact')}</a>
+          <a href={contactUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.contact')}</a>
         </div>
       </div>
       <div style={{ textAlign: 'center', marginTop: '3rem', color: 'var(--graphite-gray-light)', fontSize: '0.8rem' }}>

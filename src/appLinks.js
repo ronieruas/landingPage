@@ -45,6 +45,11 @@ export function getLegalUrl() {
   return `${getAppUrl()}/legal/.`;
 }
 
+export function getContactUrl() {
+  const url = new URL('/contact/', window.location.origin);
+  return withLangParam(url.toString());
+}
+
 export function goToLogin() {
   goToApp('/');
 }
