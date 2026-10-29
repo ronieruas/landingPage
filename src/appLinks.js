@@ -42,7 +42,7 @@ export function goToApp(path = '/') {
 }
 
 export function getLegalUrl() {
-  return `${getAppUrl()}/legal/.`;
+  return withLangParam(`${getAppUrl()}/legal/.`);
 }
 
 export function getContactUrl() {

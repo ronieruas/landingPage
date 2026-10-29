@@ -53,8 +53,8 @@ export default function Footer() {
         </div>
         
         <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-          <a href={legalUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.privacy')}</a>
-          <a href={legalUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.terms')}</a>
+          <a href={legalUrl} target="_blank" rel="noopener noreferrer" style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.privacy')}</a>
+          <a href={legalUrl} target="_blank" rel="noopener noreferrer" style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.terms')}</a>
           <a href={contactUrl} style={{ transition: 'color 0.2s' }} onMouseOver={e=>e.currentTarget.style.color='white'} onMouseOut={e=>e.currentTarget.style.color='var(--text-secondary)'}>{t('footer.contact')}</a>
         </div>
       </div>
